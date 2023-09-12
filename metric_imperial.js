@@ -1,15 +1,20 @@
 
 
 let imperial = document.querySelector('#Imperial');
-console.log(imperial);
+let metric = document.querySelector('#Metric');
 
+function ImpMetric() {
+    imperial.addEventListener ("click", function() {
+        document.querySelector('.imperial').style.display = "flex";
+        document.querySelector('.metric').style.display = "none";
+        console.log('HelloWorld')
+    });
 
-imperial.addEventListener ("click", function() {
-    if (imperial === 'Imperial') {
-            document.querySelector('.imperial').style.visibility = "visible";
-            document.querySelector('.metric').style.visibility = "hidden";
-        } else {
-            document.querySelector('.imperial').style.visibility = "hidden";
-            document.querySelector('.metric').style.visibility = "visible";
-        };
-});
+    metric.addEventListener ("click", function() {
+        document.querySelector('.metric').style.display = "flex";
+        document.querySelector('.imperial').style.display = "none";
+        console.log('HelloWorld')
+    });
+};
+
+ImpMetric();

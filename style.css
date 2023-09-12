@@ -133,15 +133,15 @@ HERO*/
     background-color: #345FF6;
     border: 8px solid #D8E2E7;
   }
-  .hero .hero__body .card .measurements {
+  .hero .hero__body .card .metric {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
-  .hero .hero__body .card .measurements .measurement {
+  .hero .hero__body .card .metric .measurement {
     width: 40%;
   }
-  .hero .hero__body .card .measurements .measurement .input {
+  .hero .hero__body .card .metric .measurement .input {
     display: flex;
     justify-content: space-between;
     border: solid #D8E2E7;
@@ -149,12 +149,60 @@ HERO*/
     margin-top: 1rem;
     padding: 1rem;
   }
-  .hero .hero__body .card .measurements .measurement .input input {
+  .hero .hero__body .card .metric .measurement .input input {
     border: none;
     outline: none;
   }
-  .hero .hero__body .result {
-    display: grid;
+  .hero .hero__body .card .metric .measurement .meas__unit {
+    color: #345FF6;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .hero .hero__body .card .imperial {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .hero .hero__body .card .imperial .measurement {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .hero__body .card .imperial .measurement .inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hero .hero__body .card .imperial .measurement .inputs .input_st, .hero .hero__body .card .imperial .measurement .inputs .input_lbs, .hero .hero__body .card .imperial .measurement .inputs .input_ft, .hero .hero__body .card .imperial .measurement .inputs .input_in {
+    display: flex;
+    justify-content: space-between;
+    border: solid #D8E2E7;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  .hero .hero__body .card .imperial .measurement .inputs .input_st input, .hero .hero__body .card .imperial .measurement .inputs .input_lbs input, .hero .hero__body .card .imperial .measurement .inputs .input_ft input, .hero .hero__body .card .imperial .measurement .inputs .input_in input {
+    border: none;
+    outline: none;
+  }
+  .hero .hero__body .card .imperial .measurement .inputs .input_st .meas__unit, .hero .hero__body .card .imperial .measurement .inputs .input_lbs .meas__unit, .hero .hero__body .card .imperial .measurement .inputs .input_ft .meas__unit, .hero .hero__body .card .imperial .measurement .inputs .input_in .meas__unit {
+    color: #345FF6;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .hero .hero__body .result .landing {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 2rem;
+    border-radius: 1rem 8rem 8rem 1rem;
+    background-color: #345FF6;
+  }
+  .hero .hero__body .result .landing .h3 {
+    margin-bottom: 1rem;
+  }
+  .hero .hero__body .result .result-displayed {
+    display: none;
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem 2rem 1rem 2rem;
     margin-top: 2rem;
@@ -166,7 +214,6 @@ HERO*/
     margin: 0;
   }
   .hero .hero__body .result .calc--result {
-    color: white;
     font-family: "Inter-SemiBold";
     font-size: 3rem;
   }

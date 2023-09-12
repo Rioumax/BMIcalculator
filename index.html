@@ -50,7 +50,7 @@
         </div>
         
   <!--inputs metric-->
-        <div class="measurements metric">
+        <div class="metric">
 
           <div class="measurement">
             <label for="height">Height</label>
@@ -73,46 +73,62 @@
         </div>
 
   <!--inputs imperial-->
-        <div class="measurements imperial">
+        <div class="imperial">
 
           <div class="measurement">
             <label for="height">Height</label>
-            <div class="input_ft">
-              <input type="text" id="height" name="height" placeholder="0" size="5" required />
-              <p class="meas__unit">ft</p>
+            <div class="inputs">
+              <div class="input_ft">
+                <input type="text" id="height" name="height" placeholder="0" size="7" required />
+                <p class="meas__unit">ft</p>
+              </div>
+              <div class="input_in">
+                <input type="text" id="height" name="height" placeholder="0" size="7" required />
+                <p class="meas__unit">in</p>
+              </div>
             </div>
-            <div class="input_in">
-              <input type="text" id="height" name="height" placeholder="0" size="5" required />
-              <p class="meas__unit">in</p>
-            </div>
+            
             
           </div>
 
           <div class="measurement">
             <label for="weight">Weight</label>
-            <div class="input_st">
-              <input type="text" id="weight" name="weight" placeholder="0" size="5" required />
-              <p class="meas__unit">st</p>
+            <div class="inputs">
+              <div class="input_st">
+                <input type="text" id="weight" name="weight" placeholder="0" size="7" required />
+                <p class="meas__unit">st</p>
+              </div>
+              
+              <div class="input_lbs">
+                <input type="text" id="weight" name="weight" placeholder="0" size="7" required />
+                <p class="meas__unit">lbs</p>
+              </div> 
             </div>
             
-            <div class="input_lbs">
-              <input type="text" id="weight" name="weight" placeholder="0" size="5" required />
-              <p class="meas__unit">lbs</p>
-            </div> 
           </div>
         </div>
 
 
 
   <!--result-->
+        
         <div class="result">
-          <div>
-            <p class="white--display">Your BMI is...</p>
-            <span class="calc--result"></span>
+          <div class="landing">
+            <p class="h3 white--display">
+              Welcome !
+           </p>
+           <p class="white--display">Enter your height and weight and you'll see your BMI result here</p>
+          </div>
+          <div class="result-displayed">
+            <div>
+              <p class="white--display">Your BMI is...</p>
+              <span class="calc--result white--display"></span>
+            </div>
+            
+            <p class="white--display">Your BMI suggests you're <!-- add classification balise span -->. 
+            Your ideal weight is between <span id="result"></span>.</p>
           </div>
           
-          <p class="white--display">Your BMI suggests you're <!-- add classification balise span -->. 
-          Your ideal weight is between <span id="result"></span>.</p>
           
         </div>
       </div>

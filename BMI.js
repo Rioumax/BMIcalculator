@@ -5,41 +5,34 @@ let intWeight = 0;
 let weight = 0;
 let BMI = 0;
 let result = document.querySelectorAll("span")[0];
-console.log(result);
+let resultDisplayed = document.querySelector('.result-displayed');
+let landing = document.querySelector('.landing');
 
-    document.getElementById("height").addEventListener('change', (e) => {
-        //console.log(e.currentTarget.value)
+
+    document.querySelector("#height").addEventListener('change', (e) => {
         height = e.currentTarget.value;
         intHeight = Number(height);
-        console.log(intHeight);
 
         if (intWeight !== 0 && intHeight !== 0) {
             BMI = intWeight / (intHeight*intHeight);
-            console.log(BMI);
-            result.innerText = BMI;
-            console.log(result);
+            result.innerText = BMI.toFixed(1);
+            resultDisplayed.style.display = "grid";
+            landing.style.display = "none";
         };
     });
     
-    document.getElementById("weight").addEventListener('change', (e) => {
+    document.querySelector("#weight").addEventListener('change', (e) => {
         weight = e.currentTarget.value;
-        intWeight = Number(weight);
-        console.log(intWeight);  
+        intWeight = Number(weight); 
         
         if (intWeight !== 0 && intHeight !== 0) {
             BMI = intWeight / (intHeight*intHeight);
-            console.log(BMI);
             result.innerText = BMI.toFixed(1);
-            console.log(result);
+            resultDisplayed.style.display = "grid";
+            landing.style.display = "none";
         };
     });
 
-    if (intWeight !== 0 && intHeight !== 0) {
-        BMI = intWeight / (intHeight*intHeight);
-        console.log(BMI);
-        result.innerText = BMI;
-        console.log(result);
-    };
 
 
 

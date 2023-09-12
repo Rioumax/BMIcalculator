@@ -184,7 +184,7 @@ HERO*/
                     }
                 }
 
-                .measurements {
+                .metric {
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
@@ -204,26 +204,87 @@ HERO*/
                                 border: none;
                                 outline: none;
                             }
-                        }  
+                        }
+                        
+                        .meas__unit {
+                            color: $clr-secondary;
+                            font-weight: 700;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .imperial {
+                    display: none;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    .measurement {
+                        display: flex;
+                        flex-direction: column;
+
+                        .inputs {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .input_st, .input_lbs, .input_ft, .input_in {
+                                display: flex;
+                                justify-content: space-between;
+                                border: solid $clr-primary;
+                                border-radius: 1rem;
+                                margin-top: 1rem;
+                                padding: 1rem;
+                                
+                                input {
+                                    border: none;
+                                    outline: none;
+                                }
+
+                                .meas__unit {
+                                    color: $clr-secondary;
+                                    font-weight: 700;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                          
                     }
                 }
             }
             
             .result {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                padding: 1rem 2rem 1rem 2rem;
-                margin-top: 2rem;
-            
-                border-radius: 1rem 8rem 8rem 1rem;
-                background-color: $clr-secondary;
+                .landing {
+                    display: flex;
+                    flex-direction: column;
+                    grid-template-columns: repeat(2, 1fr);
+                    padding: 1rem 2rem 1rem 2rem;
+                    margin-top: 2rem;
+                
+                    border-radius: 1rem 8rem 8rem 1rem;
+                    background-color: $clr-secondary;
+
+                    .h3 {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .result-displayed {
+                    display: none;
+                    grid-template-columns: repeat(2, 1fr);
+                    padding: 1rem 2rem 1rem 2rem;
+                    margin-top: 2rem;
+                
+                    border-radius: 1rem 8rem 8rem 1rem;
+                    background-color: $clr-secondary;
+                }
+                
             
                 .white--display {
                     color: $clr-white;
                     margin: 0;
                 }
                 .calc--result {
-                    color: $clr-white;
                     font-family: "Inter-SemiBold";
                     font-size: 3rem;
                 }
@@ -1121,3 +1182,4 @@ HERO*/
         }
     }
 }
+
